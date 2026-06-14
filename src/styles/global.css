@@ -195,6 +195,7 @@ main.wide {
 .pricing-footer {
   margin: 2rem 0 0;
   font-size: 0.95rem;
+  white-space: pre-line;
 }
 
 .pricing-tier-grid {
