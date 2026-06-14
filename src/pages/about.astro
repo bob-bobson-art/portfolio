@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getSiteConfig } from '../lib/gallery';
+
+const site = getSiteConfig();
+---
+
+<Layout title={`About — ${site.artistName}`} description={`About ${site.artistName}`}>
+  <section class="about">
+    <p class="eyebrow">About</p>
+    <h1>{site.artistName}</h1>
+    {site.bio ? (
+      <p class="about-copy">{site.bio}</p>
+    ) : (
+      <p class="about-copy">{site.tagline}</p>
+    )}
+
+    {site.email && (
+      <div class="about-contact">
+        <h2>Contact</h2>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+    )}
+
+    {site.socials.length > 0 && (
+      <div class="about-socials">
+        <h2>Elsewhere</h2>
+        <ul>
+          {site.socials.map((social) => (
+            <li>
+              <a href={social.url} target="_blank" rel="noreferrer">{social.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </section>
+</Layout>

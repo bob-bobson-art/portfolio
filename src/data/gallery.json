@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "fox",
+      "title": "Fox",
+      "date": "2026-06-14",
+      "category": "gallery",
+      "tags": ["painting"],
+      "image": "/images/fox.jpg",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "laboon",
+      "title": "Laboon",
+      "date": "2026-06-14",
+      "category": "gallery",
+      "tags": ["digital"],
+      "image": "/images/laboon.png",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "lady",
+      "title": "Lady",
+      "date": "2026-06-14",
+      "category": "gallery",
+      "tags": ["painting"],
+      "image": "/images/lady.jpg",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "nami",
+      "title": "Nami",
+      "date": "2026-05-23",
+      "category": "gallery",
+      "tags": ["digital"],
+      "image": "/images/nami.png",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "aiko-final",
+      "title": "Aiko",
+      "date": "2026-04-13",
+      "category": "gallery",
+      "tags": ["commission", "digital"],
+      "image": "/images/aiko_final_final.jpg",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "maelle",
+      "title": "Maelle",
+      "date": "2026-02-02",
+      "category": "gallery",
+      "tags": ["digital"],
+      "image": "/images/maelle.jpg",
+      "caption": "",
+      "published": true
+    },
+    {
+      "id": "roken-commission",
+      "title": "Roken",
+      "date": "2026-04-13",
+      "category": "gallery",
+      "tags": ["commission", "digital"],
+      "image": "/images/roken_commission.jpg",
+      "caption": "",
+      "published": true
+    }
+  ]
+}

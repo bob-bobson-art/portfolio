@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PricingTiers from '../components/PricingTiers.astro';
+import { getCommissionsPricing } from '../lib/pricing';
+import { getSiteConfig } from '../lib/gallery';
+
+const site = getSiteConfig();
+const pricing = getCommissionsPricing();
+---
+
+<Layout title={`Commissions — ${site.artistName}`} description="Commission tiers and pricing by Kirsty" wide>
+  <section class="page-header">
+    <h1>Commissions</h1>
+    <p>Compare tiers side by side</p>
+  </section>
+
+  <PricingTiers data={pricing} />
+</Layout>

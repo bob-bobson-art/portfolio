@@ -1,0 +1,92 @@
+---
+import type { GalleryItem } from '../lib/gallery';
+
+interface Props {
+  items: GalleryItem[];
+  showTags?: boolean;
+}
+
+const { items, showTags = false } = Astro.props;
+---
+
+<section class="gallery-grid" data-gallery-grid>
+  {items.map((item) => (
+    <article class="gallery-card" data-tags={item.tags.join(',')}>
+      <button
+        type="button"
+        class="gallery-card-button"
+        data-lightbox-trigger
+        data-id={item.id}
+        data-title={item.title}
+        data-date={item.date}
+        data-caption={item.caption}
+        data-image={item.image}
+        data-tags={item.tags.join(', ')}
+        aria-label={`View ${item.title}`}
+      >
+        <img src={item.image} alt={item.title} loading="lazy" />
+        <div class="gallery-card-overlay">
+          <h3>{item.title}</h3>
+          {showTags && (
+            <p class="gallery-card-tags">{item.tags.join(' · ')}</p>
+          )}
+        </div>
+      </button>
+    </article>
+  ))}
+</section>
+
+<div class="lightbox" data-lightbox hidden>
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <button type="button" class="lightbox-close" data-lightbox-close aria-label="Close">×</button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" data-lightbox-image />
+      <figcaption>
+        <h2 id="lightbox-title" data-lightbox-title></h2>
+        <p class="lightbox-meta" data-lightbox-meta></p>
+        <p data-lightbox-caption></p>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<script>
+  const lightbox = document.querySelector('[data-lightbox]');
+  const image = document.querySelector('[data-lightbox-image]');
+  const title = document.querySelector('[data-lightbox-title]');
+  const meta = document.querySelector('[data-lightbox-meta]');
+  const caption = document.querySelector('[data-lightbox-caption]');
+
+  if (lightbox && image instanceof HTMLImageElement && title && meta && caption) {
+    const openLightbox = (button: HTMLButtonElement) => {
+      image.src = button.dataset.image ?? '';
+      image.alt = button.dataset.title ?? '';
+      title.textContent = button.dataset.title ?? '';
+      meta.textContent = [button.dataset.date, button.dataset.tags].filter(Boolean).join(' · ');
+      caption.textContent = button.dataset.caption ?? '';
+      lightbox.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.setAttribute('hidden', 'true');
+      document.body.style.overflow = '';
+      image.src = '';
+    };
+
+    document.querySelectorAll('[data-lightbox-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openLightbox(trigger as HTMLButtonElement));
+    });
+
+    document.querySelectorAll('[data-lightbox-close]').forEach((el) => {
+      el.addEventListener('click', closeLightbox);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !lightbox.hasAttribute('hidden')) {
+        closeLightbox();
+      }
+    });
+  }
+</script>

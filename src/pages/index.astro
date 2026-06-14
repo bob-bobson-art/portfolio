@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import ImageViewHint from '../components/ImageViewHint.astro';
+import TagFilter from '../components/TagFilter.astro';
+import { FILTER_TAGS, getItemsByCategory, getSiteConfig } from '../lib/gallery';
+
+const site = getSiteConfig();
+const items = getItemsByCategory('gallery');
+---
+
+<Layout title={site.portfolioTitle} description={site.tagline} wide>
+  <section class="hero hero--compact">
+    <h1>{site.portfolioTitle}</h1>
+    <p class="hero-copy">{site.tagline}</p>
+  </section>
+
+  {items.length > 0 ? (
+    <>
+      <TagFilter tags={[...FILTER_TAGS]} />
+      <ImageViewHint />
+      <GalleryGrid items={items} showTags />
+    </>
+  ) : (
+    <p class="empty-state">No pictures here yet.</p>
+  )}
+</Layout>

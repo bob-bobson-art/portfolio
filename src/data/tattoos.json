@@ -1,0 +1,48 @@
+{
+  "intro": "Tattoo design tiers coming soon. Each tier will cover linework detail, sizing, and how many revision rounds are included.",
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "Tier 1",
+      "summary": "Small & simple",
+      "exampleTitle": "Coming soon",
+      "exampleImage": "",
+      "price": "TBC",
+      "detail": "Low",
+      "complexity": "Basic linework, minimal detail",
+      "background": "No background elements",
+      "revisions": "1 revision",
+      "turnaround": "TBC",
+      "bestFor": "Small flash-style designs"
+    },
+    {
+      "tier": 2,
+      "name": "Tier 2",
+      "summary": "Medium detail",
+      "exampleTitle": "Coming soon",
+      "exampleImage": "",
+      "price": "TBC",
+      "detail": "Medium",
+      "complexity": "More shading and texture",
+      "background": "Optional accents",
+      "revisions": "2 revisions",
+      "turnaround": "TBC",
+      "bestFor": "Forearm / calf sized pieces"
+    },
+    {
+      "tier": 3,
+      "name": "Tier 3",
+      "summary": "Large & detailed",
+      "exampleTitle": "Coming soon",
+      "exampleImage": "",
+      "price": "TBC",
+      "detail": "High",
+      "complexity": "Full detail and custom elements",
+      "background": "Integrated composition",
+      "revisions": "3 revisions",
+      "turnaround": "TBC",
+      "bestFor": "Larger custom tattoo designs"
+    }
+  ],
+  "footer": "Tattoo pricing will be added here soon. For now, reach out to discuss your design idea."
+}

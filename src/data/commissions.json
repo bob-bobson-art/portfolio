@@ -1,0 +1,48 @@
+{
+  "intro": "Pick a tier that fits your budget and how detailed you want the piece to be. Examples below show the kind of result you can expect at each level.",
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "Tier 1",
+      "summary": "Quick and simple",
+      "exampleTitle": "Laboon",
+      "exampleImage": "/images/laboon.png",
+      "price": "From £15",
+      "detail": "Low",
+      "complexity": "Simple shapes, minimal shading",
+      "background": "Plain or none",
+      "revisions": "1 small revision",
+      "turnaround": "1–2 weeks",
+      "bestFor": "Fun sketches, memes, and simple character ideas"
+    },
+    {
+      "tier": 2,
+      "name": "Tier 2",
+      "summary": "Balanced quality",
+      "exampleTitle": "Nami",
+      "exampleImage": "/images/nami.png",
+      "price": "From £45",
+      "detail": "Medium",
+      "complexity": "Cleaner lines and moderate shading",
+      "background": "Simple background included",
+      "revisions": "2 revisions",
+      "turnaround": "2–3 weeks",
+      "bestFor": "Character portraits and polished fan art"
+    },
+    {
+      "tier": 3,
+      "name": "Tier 3",
+      "summary": "Full illustration",
+      "exampleTitle": "Aiko",
+      "exampleImage": "/images/aiko_final_final.jpg",
+      "price": "From £90",
+      "detail": "High",
+      "complexity": "Detailed rendering, lighting, and effects",
+      "background": "Full scene or detailed backdrop",
+      "revisions": "3 revisions",
+      "turnaround": "3–5 weeks",
+      "bestFor": "Showpiece commissions and complex character art"
+    }
+  ],
+  "footer": "Prices are a starting point — final quotes depend on character complexity, number of characters, and usage. Message Kirsty to discuss your idea."
+}

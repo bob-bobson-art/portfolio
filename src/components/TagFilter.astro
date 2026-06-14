@@ -1,0 +1,39 @@
+---
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+{tags.length > 0 && (
+  <div class="tag-filter" data-tag-filter>
+    <button type="button" class="tag-chip active" data-tag="all">All</button>
+    {tags.map((tag) => (
+      <button type="button" class="tag-chip" data-tag={tag}>{tag}</button>
+    ))}
+  </div>
+)}
+
+<script>
+  const filter = document.querySelector('[data-tag-filter]');
+  const cards = document.querySelectorAll('[data-gallery-grid] .gallery-card');
+
+  if (filter) {
+    filter.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLButtonElement) || !target.dataset.tag) return;
+
+      filter.querySelectorAll('.tag-chip').forEach((chip) => chip.classList.remove('active'));
+      target.classList.add('active');
+
+      const selectedTag = target.dataset.tag;
+      cards.forEach((card) => {
+        if (!(card instanceof HTMLElement)) return;
+        const cardTags = card.dataset.tags?.split(',') ?? [];
+        const visible = selectedTag === 'all' || cardTags.includes(selectedTag);
+        card.style.display = visible ? '' : 'none';
+      });
+    });
+  }
+</script>
