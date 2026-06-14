@@ -1,18 +1,19 @@
 ---
 import { getSiteConfig } from '../lib/gallery';
+import { isActivePath, withBase } from '../lib/paths';
 
 const site = getSiteConfig();
 const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header">
-  <a href="/" class="brand">
+  <a href={withBase('/')} class="brand">
     <span class="brand-name">{site.artistName}</span>
   </a>
   <nav aria-label="Main">
-    <a href="/" class:list={['nav-link', { active: currentPath === '/' }]}>Home</a>
-    <a href="/tattoos" class:list={['nav-link', { active: currentPath === '/tattoos' }]}>Tattoos</a>
-    <a href="/commissions" class:list={['nav-link', { active: currentPath === '/commissions' }]}>Commissions</a>
-    <a href="/about" class:list={['nav-link', { active: currentPath === '/about' }]}>About</a>
+    <a href={withBase('/')} class:list={['nav-link', { active: isActivePath(currentPath, '/') }]}>Home</a>
+    <a href={withBase('/tattoos')} class:list={['nav-link', { active: isActivePath(currentPath, '/tattoos') }]}>Tattoos</a>
+    <a href={withBase('/commissions')} class:list={['nav-link', { active: isActivePath(currentPath, '/commissions') }]}>Commissions</a>
+    <a href={withBase('/about')} class:list={['nav-link', { active: isActivePath(currentPath, '/about') }]}>About</a>
   </nav>
 </header>

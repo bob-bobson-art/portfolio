@@ -1,6 +1,7 @@
 ---
 import type { PricingPageData } from '../lib/pricing';
 import { COMPARISON_ROWS } from '../lib/pricing';
+import { withBase } from '../lib/paths';
 import ImageViewHint from './ImageViewHint.astro';
 
 interface Props {
@@ -29,11 +30,11 @@ const { data } = Astro.props;
                 type="button"
                 class="pricing-tier-image-button"
                 data-lightbox-trigger
-                data-image={tier.exampleImage}
+                data-image={withBase(tier.exampleImage)}
                 data-title={tier.exampleTitle}
                 aria-label={`View full size ${tier.exampleTitle} example`}
               >
-                <img src={tier.exampleImage} alt={`${tier.exampleTitle} example`} loading="lazy" />
+                <img src={withBase(tier.exampleImage)} alt={`${tier.exampleTitle} example`} loading="lazy" />
               </button>
             ) : (
               <div class="pricing-tier-placeholder">Example coming soon</div>

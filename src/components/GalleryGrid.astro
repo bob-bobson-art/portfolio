@@ -1,5 +1,6 @@
 ---
 import type { GalleryItem } from '../lib/gallery';
+import { withBase } from '../lib/paths';
 
 interface Props {
   items: GalleryItem[];
@@ -20,11 +21,11 @@ const { items, showTags = false } = Astro.props;
         data-title={item.title}
         data-date={item.date}
         data-caption={item.caption}
-        data-image={item.image}
+        data-image={withBase(item.image)}
         data-tags={item.tags.join(', ')}
         aria-label={`View ${item.title}`}
       >
-        <img src={item.image} alt={item.title} loading="lazy" />
+        <img src={withBase(item.image)} alt={item.title} loading="lazy" />
         <div class="gallery-card-overlay">
           <h3>{item.title}</h3>
           {showTags && (
