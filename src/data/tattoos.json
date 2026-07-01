@@ -1,48 +1,48 @@
 {
-  "intro": "Tattoo design tiers coming soon. Each tier will cover linework detail, sizing, and how many revision rounds are included.",
+  "intro": "Tattoo design tiers for different sizes and detail levels. Examples below show the kind of linework and composition you can expect at each tier.",
   "tiers": [
     {
       "tier": 1,
       "name": "Tier 1",
       "summary": "Small & simple",
-      "exampleTitle": "Coming soon",
-      "exampleImage": "",
-      "price": "TBC",
+      "exampleTitle": "Choppa",
+      "exampleImage": "/images/tattoo-choppa.jpg",
+      "price": "From £25",
       "detail": "Low",
       "complexity": "Basic linework, minimal detail",
       "background": "No background elements",
       "revisions": "1 revision",
-      "turnaround": "TBC",
+      "turnaround": "1–2 weeks",
       "bestFor": "Small flash-style designs"
     },
     {
       "tier": 2,
       "name": "Tier 2",
       "summary": "Medium detail",
-      "exampleTitle": "Coming soon",
-      "exampleImage": "",
-      "price": "TBC",
+      "exampleTitle": "Denji",
+      "exampleImage": "/images/tattoo-denji.jpg",
+      "price": "From £55",
       "detail": "Medium",
       "complexity": "More shading and texture",
       "background": "Optional accents",
       "revisions": "2 revisions",
-      "turnaround": "TBC",
+      "turnaround": "2–3 weeks",
       "bestFor": "Forearm / calf sized pieces"
     },
     {
       "tier": 3,
       "name": "Tier 3",
       "summary": "Large & detailed",
-      "exampleTitle": "Coming soon",
-      "exampleImage": "",
-      "price": "TBC",
+      "exampleTitle": "Artorias 1",
+      "exampleImage": "/images/tattoo-artorias-1.jpg",
+      "price": "From £100",
       "detail": "High",
       "complexity": "Full detail and custom elements",
       "background": "Integrated composition",
       "revisions": "3 revisions",
-      "turnaround": "TBC",
+      "turnaround": "3–5 weeks",
       "bestFor": "Larger custom tattoo designs"
     }
   ],
-  "footer": "Tattoo pricing will be added here soon. For now, reach out to discuss your design idea."
+  "footer": "Tattoo pricing depends on size, placement, and detail.\nMessage Kirsty to discuss your design idea."
 }
