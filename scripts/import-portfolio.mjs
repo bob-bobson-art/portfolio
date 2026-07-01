@@ -19,12 +19,6 @@ const SKIP_IMPORT_FILES = new Set(['nami.png']);
 
 const LEGACY_IMAGES = [
   {
-    source: String.raw`C:\Users\kylec\art-portfolio\public\images\fox.jpg`,
-    filename: 'painting-fox.jpg',
-    title: 'Fox',
-    tags: ['painting'],
-  },
-  {
     source: String.raw`C:\Users\kylec\art-portfolio\public\images\laboon.png`,
     filename: 'digital-laboon.png',
     title: 'Laboon',

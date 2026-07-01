@@ -936,18 +936,6 @@
       "published": true
     },
     {
-      "id": "painting-fox",
-      "title": "Fox",
-      "date": "2026-06-14",
-      "category": "gallery",
-      "tags": [
-        "painting"
-      ],
-      "image": "/images/painting-fox.jpg",
-      "caption": "",
-      "published": true
-    },
-    {
       "id": "digital-laboon",
       "title": "Laboon",
       "date": "2026-06-14",
