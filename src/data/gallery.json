@@ -958,18 +958,6 @@
       "image": "/images/digital-laboon.png",
       "caption": "",
       "published": true
-    },
-    {
-      "id": "painting-lady",
-      "title": "Lady",
-      "date": "2026-06-14",
-      "category": "gallery",
-      "tags": [
-        "painting"
-      ],
-      "image": "/images/painting-lady.jpg",
-      "caption": "",
-      "published": true
     }
   ]
 }

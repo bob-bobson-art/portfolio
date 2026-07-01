@@ -30,12 +30,6 @@ const LEGACY_IMAGES = [
     title: 'Laboon',
     tags: ['digital'],
   },
-  {
-    source: String.raw`C:\Users\kylec\art-portfolio\public\images\lady.jpg`,
-    filename: 'painting-lady.jpg',
-    title: 'Lady',
-    tags: ['painting'],
-  },
 ];
 
 function slugify(name) {

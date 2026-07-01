@@ -12,7 +12,9 @@ const currentPath = Astro.url.pathname;
   </a>
   <nav aria-label="Main">
     <a href={withBase('/')} class:list={['nav-link', { active: isActivePath(currentPath, '/') }]}>Home</a>
-    <a href={withBase('/tattoos')} class:list={['nav-link', { active: isActivePath(currentPath, '/tattoos') }]}>Tattoos</a>
+    {site.showTattoosTab && (
+      <a href={withBase('/tattoos')} class:list={['nav-link', { active: isActivePath(currentPath, '/tattoos') }]}>Tattoos</a>
+    )}
     <a href={withBase('/commissions')} class:list={['nav-link', { active: isActivePath(currentPath, '/commissions') }]}>Commissions</a>
     <a href={withBase('/about')} class:list={['nav-link', { active: isActivePath(currentPath, '/about') }]}>About</a>
   </nav>
